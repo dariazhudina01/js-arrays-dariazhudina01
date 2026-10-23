@@ -7,18 +7,18 @@ for (let i = 0; i < colors.length; i++) {
 let numbers = [];
 
 for (let i = 0; i < 5; i++) {
-    let input = prompt("Enter number " + (i + 1));
+    let input = typeof prompt !== 'undefined' ? prompt("Enter number " + (i + 1)) : "0";
     numbers.push(parseFloat(input));
 }
 
-let numbersString = "";
+let yourString = "";
 for (let i = 0; i < numbers.length; i++) {
-    numbersString += numbers[i];
+    yourString += numbers[i];
     if (i < numbers.length - 1) {
-        numbersString += ", ";
+        yourString += ", ";
     }
 }
-console.log("Numbers: " + numbersString);
+console.log("Numbers: " + yourString);
 
 let sum = 0;
 for (let i = 0; i < numbers.length; i++) {
@@ -44,4 +44,3 @@ for (let i = 1; i < numbers.length; i++) {
     }
 }
 console.log("Largest: " + largest);
- //hello//
